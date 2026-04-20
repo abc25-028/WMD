@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>REGISTRATION FORM</title>
+
+<style>
+
+label{
+
+display: inline-block;
+
+width: 120px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+</body>
+<script type="module">
+import data from './countries_data.json' with {type:'json'};
+console.log(data);
+var cbo=document.getElementid("country");
+//var cbo=document.querySelector("#country");
+//adding data
+for(var k=o; k<data.length; k++){
+    var item=data[k];
+    var option=document.createOption();
+    option.value= item.code;
+    option.textcontent=item.countryname;
+    cbo.appendChild(option);
+}
+
+</script>
+
+<fieldset id="fieldset">
+
+<legend>Registration Form</legend>
+
+<label for="customer id">Customer ID:</label>
+
+<input type="text" id="customer id" required
+
+placeholder="Customer ID"/><br/>
+
+<label for="firstname">Firstname:</label>
+
+<input type="text" id="firstname" required
+
+placeholder="Firstname"/><br/>
+
+<label for="Surname">Surname:</label>
+
+<input type="text" id="Surname" required
+
+placeholder="Surname"/><br/>
+
+<label for="gender">Gender:</label>
+
+<select id= "gender" onchange="alert(this.value)">
+
+<!--<option>select...</option>
+
+            <option>Female</option>
+
+            <option>Male</option>
+
+            <option>Other</option>
+
+        -->
+
+<option value="0">Select---</option>
+
+<option value="F">Female</option>
+
+<option value="M">Male</option>
+
+<option value="O">Other</option>
+
+</select><br/>
+
+<label for="dob">DOB:</label>
+
+<input type="date" id="dob" required/><br/>
+
+<label for="email">Email:</label>
+
+<input type="email" id="email" required
+
+placeholder="Email Address"/> <br/>
+
+<label>Marital Status:</label>
+
+<label for="Single">Single</label>
+
+<input type="radio" id="Single" name="maritalStatus" value="Single"/>
+
+<label for="Married">Married</label>
+
+<input type="radio" id="Married" name="maritalStatus" value="Married"/>
+
+<label for="Divorced">Divorced</label>
+
+<input type="radio" id="Divorced" name="maritalStatus" value="Divorced"/>
+
+<label for="Widowed">Widowed</label>
+
+<input type="radio" id="Widowed" name="maritalStatus" value="Widowed"/><br/>
+
+<label for="cellno">Cell Number:</label>
+
+<input type="tel" id="cellno" required
+
+placeholder="710000000"/><br/>
+
+<label for="password">Password:</label>
+
+<input type="password" id="password" required/><br/>
+
+<label for="dateregistered">Date Registered:</label>
+
+<input type="date" id="dateregistered" required/><br/>
+
+<label for="timeregistered">Time Registered:</label>
+
+<input type="time" id="timeregistered" required/><br/>
+
+<label for ="country">Country:</label>
+
+<select id="country" ></select><br/>
+
+<label for="modules">Modules:</label>
+
+<label for="cms">CMS</label>
+
+<input type="checkbox" id="cms" name="modules"/>
+
+<label for="wmd">WMD</label>
+
+<input type="checkbox" id="wmd" name="modules"/>
+
+<label for="c#">C#</label>
+
+<input type="checkbox" id="c#" name="modules"/>
+
+</fieldset>
+
+</html>
+
+
